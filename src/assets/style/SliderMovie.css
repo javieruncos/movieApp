@@ -1,0 +1,121 @@
+
+.swiper {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    font-size: 18px;
+    height: 140px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 2px;
+    
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* ***********************estilos del juegos de los sliders***************************** */
+
+.game {
+    height: 77%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    transition: 0.5s ease;
+    position: absolute;
+    top: 8px;
+}
+
+.game:hover .capaGame-slider{
+    opacity: 1;
+}
+
+.capaGame-slider{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.555);
+    opacity: 0;
+    transition: 0.5s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: end;
+}
+
+.capaGame-slider div{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    color: white;
+    
+}
+
+.game:hover{
+    scale: 1.05;
+}
+
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: var(--swiper-navigation-sides-offset, 10px);
+    right: auto;
+    height: 114%;
+    background-color: rgba(17, 17, 17, 0.884);
+    background-color: black;
+    top: 0;
+    align-items: center;
+    left: 0;
+    display: flex;
+    width: 70px;
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    content: 'prev';
+    padding-top: 18px;
+    color: blueviolet;
+}
+
+
+
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: var(--swiper-navigation-sides-offset, 10px);
+    left: auto;
+    height: 114%;
+    background-color: rgba(17, 17, 17, 0.884);
+    top: 0;
+    align-items: center;
+    right: 0;
+    display: flex;
+    width: 70px;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    color: blueviolet;
+    padding-top: 18px;
+
+}
+
+
+
+
