@@ -11,12 +11,9 @@ const SliderMovie = () => {
     return (
         <>
             <Swiper
-                slidesPerView={5}
+                slidesPerView={8}
                 centeredSlides={false}
-                spaceBetween={10}
-                pagination={{
-                    type: 'fraction',
-                }}
+                spaceBetween={6}
                 navigation={true}
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
@@ -24,12 +21,7 @@ const SliderMovie = () => {
                 <SwiperSlide>
                     <div className='game'>
                         <img src="https://th.bing.com/th/id/OIP.A69cHuH21i8r_fo8RAe_uwHaD4?rs=1&pid=ImgDetMain" alt="" />
-                        <div className='capaGame-slider'>
-                            <div>
-                                <span>name juego</span>
-                                <span>rating</span>
-                            </div>
-                        </div>
+                       
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>

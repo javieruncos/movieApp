@@ -1,11 +1,9 @@
 
 
 .slider{
-    height: 400px;
+    height: 260px;
     width: 100%;
-    overflow: hidden;
-    background-color: aqua;
-    position: relative;
+    padding-left: 20px;
 }
 
 

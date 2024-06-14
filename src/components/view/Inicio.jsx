@@ -8,11 +8,22 @@ const Inicio = () => {
             <div className='main-inicio'>
                 <div>
                     <PortadaInicio></PortadaInicio>
-                </div>
-
-                <div className='slider'>
-                    <h3>Recomendados</h3>
-                    <SliderMovie></SliderMovie>
+                    <div className='slider mt-2'>
+                        <span className='fs-5'>Recomendados</span>
+                        <SliderMovie></SliderMovie>
+                    </div>
+                    <div className='slider'>
+                        <span className='fs-5'>Recomendados</span>
+                        <SliderMovie></SliderMovie>
+                    </div>
+                    <div className='slider'>
+                        <span className='fs-5'>Recomendados</span>
+                        <SliderMovie></SliderMovie>
+                    </div>
+                    <div className='slider'>
+                        <span className='fs-5'>Recomendados</span>
+                        <SliderMovie></SliderMovie>
+                    </div>
                 </div>
             </div>
         </>
