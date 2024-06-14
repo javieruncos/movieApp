@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import '../../assets/style/ModalMovie.css';
-import { getModalId } from '../../helpers/app';
+import { getModalId, getMovie } from '../../helpers/app';
 const ModalMovie = ({ lgShow, setLgShow, movieId }) => {
     const [movie, setMovie] = useState({})
+    const [arregloSugerencia, setArregloSugerencia] = useState([])
+    const categoria = 'movie'
 
     useEffect(() => {
         getModalId(movieId).then((res) => {
@@ -11,6 +13,12 @@ const ModalMovie = ({ lgShow, setLgShow, movieId }) => {
             console.log(res)
         })
     }, [movieId])
+
+    useEffect(() => {
+        getMovie(categoria).then((res) => {
+            setArregloSugerencia(res.Search)
+        })
+    }, [])
 
 
     return (
@@ -46,29 +54,18 @@ const ModalMovie = ({ lgShow, setLgShow, movieId }) => {
                     </div>
                 </Modal.Header>
                 <Modal.Body>
-                
+
                     <div className='modal-contenido container'>
                         <div className='row'>
-                           <div className='col-12 col-md-6 col-lg-6'>
-                              <div className='modal-movie-card my-2'>
-
-                              </div>
-                           </div>
-                           <div className='col-12 col-md-6 col-lg-6'>
-                              <div className='modal-movie-card my-2'>
-
-                              </div>
-                           </div>
-                           <div className='col-12 col-md-6 col-lg-6'>
-                              <div className='modal-movie-card my-2'>
-
-                              </div>
-                           </div>
-                           <div className='col-12 col-md-6 col-lg-6'>
-                              <div className='modal-movie-card my-2'>
-
-                              </div>
-                           </div>
+                            {
+                                arregloSugerencia.slice(0,9).map((movie) => (
+                                    <div className='col-6 col-md-6 col-lg-4' key={movie.imdbID}>
+                                        <div className='modal-movie-card my-2'>
+                                           <img src={movie.Poster} alt="" className='w-100'/>
+                                        </div>
+                                    </div>
+                                ))
+                            }
                         </div>
                     </div>
                 </Modal.Body>
