@@ -9,20 +9,12 @@ const Inicio = () => {
                 <div>
                     <PortadaInicio></PortadaInicio>
                     <div className='slider mt-2'>
-                        <span className='fs-5'>Recomendados</span>
-                        <SliderMovie></SliderMovie>
+                        <span className='fs-5'>Tu proxima historia</span>
+                        <SliderMovie categoria='movie'></SliderMovie>
                     </div>
                     <div className='slider'>
-                        <span className='fs-5'>Recomendados</span>
-                        <SliderMovie></SliderMovie>
-                    </div>
-                    <div className='slider'>
-                        <span className='fs-5'>Recomendados</span>
-                        <SliderMovie></SliderMovie>
-                    </div>
-                    <div className='slider'>
-                        <span className='fs-5'>Recomendados</span>
-                        <SliderMovie></SliderMovie>
+                        <span className='fs-5'>series</span>
+                        <SliderMovie categoria="series"></SliderMovie>
                     </div>
                 </div>
             </div>
