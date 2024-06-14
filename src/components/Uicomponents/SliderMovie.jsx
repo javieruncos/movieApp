@@ -8,13 +8,18 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { getMovie } from '../../helpers/app';
 
 
-const SliderMovie = ({ categoria }) => {
+const SliderMovie = ({ categoria ,lgShow, setLgShow,movieId,setMovieId}) => {
 
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
         getMovie(categoria).then(resp => setMovies(resp.Search))
     }, [])
+
+    const handleClick = (id) => {
+        setLgShow(true)
+        setMovieId(id)
+    }
 
     return (
         <>
@@ -28,7 +33,7 @@ const SliderMovie = ({ categoria }) => {
             >
                 {
                     movies.map(movie => (
-                        <SwiperSlide key={movie.imdbID}>
+                        <SwiperSlide key={movie.imdbID} onClick={() => handleClick(movie.imdbID)}>
                             <div className='game'>
                                 <img src={movie.Poster} alt="" />
 

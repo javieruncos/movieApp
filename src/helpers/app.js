@@ -8,3 +8,15 @@ export const getMovie = async (categoria) => {
         console.log(error)
     }
 }
+
+
+export const  getModalId = async (id) => {
+    try {
+        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=1d7763de&i=${id}`);
+        const data = await respuesta.json();
+        console.log(data)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
