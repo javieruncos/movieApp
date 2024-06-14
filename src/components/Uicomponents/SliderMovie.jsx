@@ -8,13 +8,22 @@ import { Pagination, Navigation } from 'swiper/modules';
 import { getMovie } from '../../helpers/app';
 
 
-const SliderMovie = ({ categoria ,lgShow, setLgShow,movieId,setMovieId}) => {
 
+const SliderMovie = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) => {
     const [movies, setMovies] = useState([])
 
     useEffect(() => {
-        getMovie(categoria).then(resp => setMovies(resp.Search))
+        const storedMovies = JSON.parse(localStorage.getItem(`movies_${categoria}`));
+        if (storedMovies) {
+            setMovies(storedMovies);
+        } else {
+            getMovie(categoria).then(resp => {
+                setMovies(resp.Search);
+                localStorage.setItem(`movies_${categoria}`, JSON.stringify(resp.Search));
+            });
+        }
     }, [])
+
 
     const handleClick = (id) => {
         setLgShow(true)

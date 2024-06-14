@@ -6,13 +6,11 @@ const ModalMovie = ({ lgShow, setLgShow, movieId }) => {
     const [movie, setMovie] = useState({})
 
     useEffect(() => {
-
         getModalId(movieId).then((res) => {
             setMovie(res)
             console.log(res)
         })
     }, [movieId])
-
 
 
     return (
@@ -26,18 +24,51 @@ const ModalMovie = ({ lgShow, setLgShow, movieId }) => {
             >
                 <Modal.Header closeButton className='header-modal'>
                     <div className='modal-contenedor-img'>
-                        <img src={movie.Poster} alt="" />
+                        <div className='modal-img'>
+                            <img src={movie.Poster} alt="" />
+                        </div>
+                        <div className='container modalcontenido-movie'>
+                            <h3 className='text-light'>{movie.Title}</h3>
+                            <div className='info-adicional'>
+                                <span>{movie.Type}</span>
+                                <span>{movie.Year}</span>
+                                <span>{movie.Runtime}</span>
+                                <span>{movie.imdbRating}</span>
+                            </div>
+                            <p>
+                                {movie.Plot}
+                            </p>
+                            <div>
+                                <h5>elenco</h5>
+                                <p>{movie.Actors}</p>
+                            </div>
+                        </div>
                     </div>
                 </Modal.Header>
                 <Modal.Body>
+                
                     <div className='modal-contenido container'>
-                        <h3 className='text-light'>{movie.Title}</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </p>
-                        <div>
-                            <h5>elemenco</h5>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, sint?</p>
+                        <div className='row'>
+                           <div className='col-12 col-md-6 col-lg-6'>
+                              <div className='modal-movie-card my-2'>
+
+                              </div>
+                           </div>
+                           <div className='col-12 col-md-6 col-lg-6'>
+                              <div className='modal-movie-card my-2'>
+
+                              </div>
+                           </div>
+                           <div className='col-12 col-md-6 col-lg-6'>
+                              <div className='modal-movie-card my-2'>
+
+                              </div>
+                           </div>
+                           <div className='col-12 col-md-6 col-lg-6'>
+                              <div className='modal-movie-card my-2'>
+
+                              </div>
+                           </div>
                         </div>
                     </div>
                 </Modal.Body>
