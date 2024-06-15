@@ -66,7 +66,7 @@ const Inicio = ({ movieId ,setMovieId}) => {
                     </div>
                 </div>
             </div>
-            <ModalMovie lgShow={lgShow} setLgShow={setLgShow} movieId={movieId}></ModalMovie>
+            <ModalMovie lgShow={lgShow} setLgShow={setLgShow} movieId={movieId} setMovieId={setMovieId}></ModalMovie>
         </>
     );
 };

@@ -1,17 +1,37 @@
+
 .modal-movie {
-    background-color: rgba(0, 0, 0, 0.678); /* Color de fondo personalizado */
-    color: #7f8183; /* Color de texto personalizado */
+    background-color: rgba(0, 0, 0, 0.678); 
+    color: #7f8183; 
+    padding: 0px;
+}
+
+.modal-body{
+    height: 400px;
+    width: 100%;
+    padding: 0;
+    background-color: #191919;
+}
+
+.modal-header{
+    height: 390px;
+    width: 100%;
+    padding: 0px;
+    flex-direction: column;
+    padding-top: 0px;
+}
+
+.modal-body-contenido{
+    width: 100%;
+   
 }
 
 .modal-contenedor-img{
-    height: 370px;
+    height: 390px;
     width: 100%;
     background-color: #191919;
-    position: absolute;
     left: 0;
     top: 0;
     display: flex;
-   
 }
 
 .modal-contenedor-img .modal-img{
@@ -41,14 +61,23 @@
 }
 
 .modal-contenido{
-    height: 400px;
     width: 100%;
     background-color: #191919;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin-top: 320px;
     padding-top: 30px;
+}
+
+.modal-header .btn-close {
+    padding: calc(var(--bs-modal-header-padding-y)* .5) calc(var(--bs-modal-header-padding-x)* .5);
+    margin: calc(-.5* var(--bs-modal-header-padding-y)) calc(-.5* var(--bs-modal-header-padding-x)) calc(-.5* var(--bs-modal-header-padding-y)) auto;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 40px;
+    padding-top: 40px;
+}
+.modal-header .btn-close:focus {
+    box-shadow: none;
 }
 
 /* ********************estilos card peliculas sugerencias*************************************** */

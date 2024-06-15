@@ -45,7 +45,6 @@ const SliderCategoria = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) 
                     <SwiperSlide key={movie.imdbID} onClick={() => handleClick(movie.imdbID)}>
                         <div className='game'>
                             <img src={movie.Poster} alt="" />
-
                         </div>
                     </SwiperSlide>
                 ))
