@@ -38,6 +38,16 @@ const SliderMovie = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) => {
                 spaceBetween={6}
                 navigation={true}
                 modules={[Pagination, Navigation]}
+                breakpoints={{
+                    320: { // Cuando la ventana tiene >= 320px de ancho, muestra 2 elementos
+                        slidesPerView: 2,
+                        spaceBetween: 10
+                    },
+                    768: { // Cuando la ventana tiene >= 768px de ancho, muestra 7 elementos
+                        slidesPerView: 7,
+                        spaceBetween: 6
+                    }
+                }}
                 className="mySwiper"
             >
                 {
