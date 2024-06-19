@@ -1,0 +1,52 @@
+.Menu{
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    height: 70px;
+    width: 100%;
+    position:fixed;
+    top: 0;
+    z-index: 100;
+    animation: header-scroll linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 100px;
+    transition: 1s ease;
+
+    
+   
+}
+
+@keyframes header-scroll {
+    to{
+        background-color: black;
+    }
+}
+
+.menu-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    color: white;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.menu-button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center
+}
+
+@media screen and (max-width: 599px) {
+    .menu-container{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

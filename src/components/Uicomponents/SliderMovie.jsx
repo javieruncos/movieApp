@@ -33,7 +33,7 @@ const SliderMovie = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) => {
     return (
         <>
             <Swiper
-                slidesPerView={8}
+                slidesPerView={7}
                 centeredSlides={false}
                 spaceBetween={6}
                 navigation={true}
