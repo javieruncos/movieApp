@@ -73,7 +73,7 @@ const ModalMovie = ({ lgShow, setLgShow, movieId, setMovieId }) => {
                                                     {movie.Plot}
                                                 </p>
                                                 <div>
-                                                    <h5>elenco</h5>
+                                                    <h5 className='text-light'>Elenco</h5>
                                                     <p>{movie.Actors}</p>
                                                 </div>
                                             </div>

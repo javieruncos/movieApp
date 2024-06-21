@@ -3,7 +3,7 @@ import { Button, Modal } from 'react-bootstrap';
 import "../../assets/style/ModalBuscador.css";
 import { getMovieCategoria } from '../../helpers/app';
 
-const ModalBuscador = ({ show, setShow }) => {
+const ModalBuscador = ({ show, setShow ,lgShow, setLgShow, movieId, setMovieId}) => {
 
     const [filterMovie, setFilterMovie] = useState([])
     const [nameMovie, setnameMovie] = useState("action")
@@ -23,6 +23,11 @@ const ModalBuscador = ({ show, setShow }) => {
 
     }, [nameMovie])
 
+    const handleClick = (id) => {
+        setLgShow(true)
+        setMovieId(id)
+    }
+
     return (
         <>
             <Modal show={show} fullscreen={true} onHide={() => setShow(false)} className='modal-buscador'>
@@ -40,7 +45,7 @@ const ModalBuscador = ({ show, setShow }) => {
                                     filterMovie.map((movie) => (
                                         <>
                                             <div className='col-6 col-md-3 col-lg-3'>
-                                                <div className='modal-buscador-cards my-3'>
+                                                <div className='modal-buscador-cards my-3' onClick={() => handleClick(movie.imdbID)}>
                                                     <img src={movie.Poster} alt={movie.Title} />
                                                 </div>
 
