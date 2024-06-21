@@ -1,19 +1,20 @@
 import React from 'react';
 import '../../assets/style/Menu.css';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import useModal from '../../hooks/useModal';
 
-const Menu = () => {
+const Menu = ({handleShow}) => {
     return (
-       <header>
-        <div className='Menu'>
-            <div className='menu-container'>
-                <h2>Peliculas</h2>
-                <button className='menu-button'>
-                <i className="bi bi-search fs-4"></i>
-                </button>
+        <header>
+            <div className='Menu'>
+                <div className='menu-container'>
+                    <h2>Peliculas</h2>
+                    <button className='menu-button' onClick={handleShow} >
+                        <i className="bi bi-search fs-4"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-       </header>
+        </header>
     );
 };
 

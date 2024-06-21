@@ -5,7 +5,9 @@ import PortadaInicio from '../Uicomponents/PortadaInicio';
 import SliderMovie from '../Uicomponents/SliderMovie';
 import ModalMovie from '../Uicomponents/ModalMovie';
 import SliderCategoria from '../Uicomponents/SliderCategoria';
-const Inicio = ({ movieId ,setMovieId}) => {
+import ModalBuscador from '../Uicomponents/ModalBuscador';
+import useModal from '../../hooks/useModal';
+const Inicio = ({ movieId ,setMovieId,show,setShow}) => {
 
     const [lgShow, setLgShow] = useState(false);
     return (
@@ -67,6 +69,7 @@ const Inicio = ({ movieId ,setMovieId}) => {
                 </div>
             </div>
             <ModalMovie lgShow={lgShow} setLgShow={setLgShow} movieId={movieId} setMovieId={setMovieId}></ModalMovie>
+            <ModalBuscador show={show} setShow={setShow}></ModalBuscador>
         </>
     );
 };

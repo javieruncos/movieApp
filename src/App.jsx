@@ -9,14 +9,19 @@ import Menu from './components/common/Menu';
 
 function App() {
   const [movieId, setMovieId] = useState("")
+  const [show, setShow] = useState(false);
+  function handleShow() {
+    setShow(true);
+  }
+
   return (
     <>
 
       <div className='App'>
         <BrowserRouter>
-          <Menu></Menu>
+          <Menu handleShow={handleShow}></Menu>
           <Routes>
-            <Route path='/' element={<Inicio movieId={movieId} setMovieId={setMovieId}></Inicio>}></Route>
+            <Route path='/' element={<Inicio movieId={movieId} setMovieId={setMovieId} show={show} setShow={setShow}></Inicio>}></Route>
           </Routes>
         </BrowserRouter>
       </div>
