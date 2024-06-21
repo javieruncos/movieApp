@@ -78,7 +78,6 @@ const ModalMovie = ({ lgShow, setLgShow, movieId, setMovieId }) => {
                                                 </div>
                                             </div>
                                         </>
-
                                     }
                                 </div>
                             </Modal.Header>
