@@ -12,7 +12,7 @@ const Inicio = ({ movieId ,setMovieId,show,setShow}) => {
     const [lgShow, setLgShow] = useState(false);
     return (
         <>
-            <div className='main-inicio'>
+            <div className='main-section'>
                 <div>
                     <PortadaInicio></PortadaInicio>
                     <div className='slider mt-2'>
