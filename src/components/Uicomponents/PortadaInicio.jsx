@@ -1,20 +1,20 @@
 import React, { useEffect ,useState} from 'react';
 import '../../assets/style/Portada.css';
 import { getModalId } from '../../helpers/app';
+import portadaSpiderman from '../../assets/img/spiderman-home.webp';
 const PortadaInicio = () => {
 
     const [moviePortada, setMoviePortada] = useState({})
 
    useEffect(() => {
        getModalId('tt10872600').then(resp => {
-           console.log(resp)
            setMoviePortada(resp)
        })
     }, [])
 
     return (
         <div className='portada'>
-            <img src="https://thumb.canalplus.pro/http/unsafe/1440x810/filters:quality(80)/img-hapi.canalplus.pro:80/ServiceImage/ImageID/114114060" alt="" />
+            <img src={portadaSpiderman} alt="" />
             <div className='portada-capa-fondo'>
                 <div className='portada-titulo'>
                     <h1 className='display-3 fw-bold'>{moviePortada.Title}</h1>

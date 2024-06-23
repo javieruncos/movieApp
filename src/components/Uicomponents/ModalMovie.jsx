@@ -15,7 +15,6 @@ const ModalMovie = ({ lgShow, setLgShow, movieId, setMovieId }) => {
         setMostrarSpinner(true);
         getModalId(movieId).then((res) => {
             setMovie(res)
-            console.log(res)
             const timeoutID = setTimeout(() => {
                 setMostrarSpinner(false);
             }, 1000);

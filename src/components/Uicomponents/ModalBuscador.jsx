@@ -18,7 +18,6 @@ const ModalBuscador = ({ show, setShow ,lgShow, setLgShow, movieId, setMovieId})
         getMovieCategoria(nameMovie).then(resp => {
             setFilterMovie(resp.Search || []);
             localStorage.setItem(`movies_${nameMovie}`, JSON.stringify(resp.Search));
-            console.log(resp.Search)
         });
 
     }, [nameMovie])

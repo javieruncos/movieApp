@@ -11,9 +11,6 @@
     animation-timeline: scroll(root block);
     animation-range: 0 100px;
     transition: 1s ease;
-
-    
-   
 }
 
 @keyframes header-scroll {
