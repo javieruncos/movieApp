@@ -8,3 +8,8 @@
     font-optical-sizing: auto;
    
 }
+
+.main-section{
+    flex-grow: 1;
+    padding-bottom: 20px;
+}
