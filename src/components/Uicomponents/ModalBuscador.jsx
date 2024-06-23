@@ -41,10 +41,10 @@ const ModalBuscador = ({ show, setShow ,lgShow, setLgShow, movieId, setMovieId})
                     <div className='container-fluid'>
                         <div className='row'>
                             {
-                                filterMovie.length === 0 ? <h1 className='text-center'>No hay resultados</h1> :
-                                    filterMovie.map((movie) => (
+                                filterMovie.length === 0 ? <h1 className='text-center'>No search results</h1> :
+                                    filterMovie.map((movie,index) => (
                                         <>
-                                            <div className='col-6 col-md-3 col-lg-3'>
+                                            <div className='col-6 col-md-3 col-lg-3'  key={movie.imdbID}>
                                                 <div className='modal-buscador-cards my-3' onClick={() => handleClick(movie.imdbID)}>
                                                     <img src={movie.Poster} alt={movie.Title} />
                                                 </div>

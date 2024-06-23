@@ -29,7 +29,7 @@
 //         setLgShow(true)
 //         setMovieId(id)
 //     }
-   
+
 
 //     return (
 //         <>
@@ -104,7 +104,6 @@ const SliderCategoria = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) 
             centeredSlides={false}
             spaceBetween={6}
             navigation={true}
-            pagination={{ clickable: true }}
             modules={[Pagination, Navigation]}
             breakpoints={{
                 320: { // Cuando la ventana tiene >= 320px de ancho, muestra 2 elementos
@@ -112,6 +111,10 @@ const SliderCategoria = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) 
                     spaceBetween: 10
                 },
                 768: { // Cuando la ventana tiene >= 768px de ancho, muestra 7 elementos
+                    slidesPerView: 5,
+                    spaceBetween: 6
+                },
+                991: { // Cuando la ventana tiene >= 991px de ancho, muestra 7 elementos
                     slidesPerView: 7,
                     spaceBetween: 6
                 }

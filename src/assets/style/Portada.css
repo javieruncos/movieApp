@@ -27,8 +27,9 @@
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding-left: 40px;
+   
     
 }
 
@@ -36,25 +37,17 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    font-size: 23px;
+    font-size: 18px;
 }
 
-.portada-botones{
+.portada-info{
     display: flex;
     gap: 20px;
+    color:green;
    
 }
 
-.portada-botones button{
-    padding: 5px 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgba(128, 128, 128, 0.356);
-    color: white;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 20px;
-}
+
 
 @media screen and (max-width: 599px) {
     .portada{
@@ -88,9 +81,14 @@
         flex-direction: column;
         justify-content: center;
         padding-left: 0px;
-        gap: 20px;
-        text-align: center;
-        
+        gap: 0px;
+        padding-top: 60px;
+    }
+
+    .portada-titulo h1{
+        font-size: 20px;
+        width: 100%;
+        padding-left: 30px;
     }
 
     .portada-botones{
@@ -102,10 +100,21 @@
     .portada-descripcion{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         width: 100%;
         padding: 10px 30px;
-        font-size: 13px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    .portada{
+        height: 480px;
+        width: 100%;
+    }
+
+    .portada-descripcion {
+        font-size: 16px;
     }
 }

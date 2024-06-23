@@ -44,9 +44,14 @@ const SliderMovie = ({ categoria, lgShow, setLgShow, movieId, setMovieId }) => {
                         spaceBetween: 10
                     },
                     768: { // Cuando la ventana tiene >= 768px de ancho, muestra 7 elementos
+                        slidesPerView: 5,
+                        spaceBetween: 6
+                    },
+                    991: { // Cuando la ventana tiene >= 991px de ancho, muestra 7 elementos
                         slidesPerView: 7,
                         spaceBetween: 6
                     }
+
                 }}
                 className="mySwiper"
             >

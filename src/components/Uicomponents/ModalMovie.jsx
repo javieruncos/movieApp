@@ -62,7 +62,7 @@ const ModalMovie = ({ lgShow, setLgShow, movieId, setMovieId }) => {
                                                 <img src={movie.Poster} alt="" />
                                             </div>
                                             <div className='container modalcontenido-movie'>
-                                                <h3 className='text-light'>{movie.Title}</h3>
+                                                <h5 className='text-light pt-3'>{movie.Title}</h5>
                                                 <div className='info-adicional'>
                                                     <span>{movie.Type}</span>
                                                     <span>{movie.Year}</span>

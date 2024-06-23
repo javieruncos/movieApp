@@ -8,7 +8,7 @@ const Menu = ({handleShow}) => {
         <header>
             <div className='Menu'>
                 <div className='menu-container'>
-                    <h2>Peliculas</h2>
+                    <h2 className='text-danger fw-bold'>MOVIEFLIX</h2>
                     <button className='menu-button' onClick={handleShow} >
                         <i className="bi bi-search fs-4"></i>
                     </button>
