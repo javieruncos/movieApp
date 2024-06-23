@@ -1,0 +1,123 @@
+.portada{
+    height: 600px;
+    width: 100%;
+    color: white;
+    font-size: 30px;
+    position: relative;
+}
+
+.portada img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.portada-capa-fondo{
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
+.portada-titulo{
+    height: 100%;
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px;
+   
+    
+}
+
+.portada-descripcion{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.portada-info{
+    display: flex;
+    gap: 20px;
+    color:green;
+   
+}
+
+
+
+@media screen and (max-width: 599px) {
+    .portada{
+        height: 400px;
+        width: 100%;
+        color: white;
+        font-size: 15px;
+        position: relative;
+    }
+    
+    .portada img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .portada-capa-fondo{
+        height: 100%;
+        width: 100%;
+        position:absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.712);
+    }
+    
+    .portada-titulo{
+        height: 100%;
+        width: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0px;
+        gap: 0px;
+        padding-top: 60px;
+    }
+
+    .portada-titulo h1{
+        font-size: 20px;
+        width: 100%;
+        padding-left: 30px;
+    }
+
+    .portada-botones{
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .portada-descripcion{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    .portada{
+        height: 480px;
+        width: 100%;
+    }
+    .portada-titulo {
+        height: 100%;
+        width: 61%;
+        
+    }
+
+    .portada-descripcion {
+        font-size: 15px;
+    }
+}
