@@ -1,6 +1,9 @@
+const keyMovie = import.meta.env.VITE_APP_KEY;
+
+
 export const getMovie = async (categoria) => {
     try {
-        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=1d7763de&s=man&type=${categoria}`);
+        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=${keyMovie}&s=man&type=${categoria}`);
         const data = await respuesta.json();
         return data
     } catch (error) {
@@ -11,7 +14,7 @@ export const getMovie = async (categoria) => {
 
 export const  getModalId = async (id) => {
     try {
-        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=1d7763de&i=${id}`);
+        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=${keyMovie}&i=${id}`);
         const data = await respuesta.json();
         return data
     } catch (error) {
@@ -23,7 +26,7 @@ export const  getModalId = async (id) => {
 
 export const getMovieCategoria = async (movie) => {
     try {
-        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=1d7763de&s=${movie}`);
+        const respuesta = await fetch(`http://www.omdbapi.com/?apikey=${keyMovie}&s=${movie}`);
         const data = await respuesta.json();
         return data
     } catch (error) {
