@@ -111,7 +111,7 @@
     }
 
     .modal-header {
-        height: 707px;
+        height: 807px;
         width: 100%;
         padding: 0px;
         flex-direction: column;
@@ -120,7 +120,7 @@
     }
 
     .modal-contenedor-img {
-        height: 390px;
+        height: 490px;
         width: 100%;
         background-color: #191919;
         left: 0;
