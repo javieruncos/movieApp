@@ -42,15 +42,13 @@ const ModalBuscador = ({ show, setShow ,lgShow, setLgShow, movieId, setMovieId})
                             {
                                 filterMovie.length === 0 ? <h1 className='text-center'>No search results</h1> :
                                     filterMovie.map((movie,index) => (
-                                        <>
-                                            <div className='col-6 col-md-3 col-lg-3'  key={movie.imdbID}>
-                                                <div className='modal-buscador-cards my-3' onClick={() => handleClick(movie.imdbID)}>
+                                            <div className='col-6 col-md-3 col-lg-3' key={movie.imdbID}  >
+                                                <div className='modal-buscador-cards my-3'  onClick={() => handleClick(movie.imdbID)}>
                                                     <img src={movie.Poster} alt={movie.Title} />
                                                 </div>
 
                                             </div>
-                                        </>
-
+                                        
                                     ))}
                         </div>
                     </div>

@@ -59,7 +59,7 @@
 }
 
 .modal-buscador-cards{
-    height: 280px;
+    height: 400px;
     width: 100%;
     background-color: #191919;
 }
@@ -67,4 +67,20 @@
 .modal-buscador-cards img{
     height: 100%;
     width: 100%;
+}
+
+@media screen and (max-width: 599px) {
+    .modal-buscador-cards {
+        height: 309px;
+        width: 100%;
+        background-color: #191919;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+    .modal-buscador-cards {
+        height: 309px;
+        width: 100%;
+        background-color: #191919;
+    }
 }
